@@ -1,0 +1,187 @@
+
+
+*{box-sizing: border-box;} /*Mantiene el ancho independiente del padding Regla para todos las etiquetas para que nos quepan 3 columnas en las sections*/
+body{
+	font-family: 'roboto', sans-serif; /*Para el cuerpo usamos el tipo "roboto"*/
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.home-wrapper {
+	background:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('../images/background.jpg') no-repeat center top;
+	background-size: cover;
+	color: white; 
+} /* La linea " linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )" sirve para oscureser la imagen de fondo Esta etiqueta me sirve para montar la imagen de fondo que no se repita y que la letra
+que esta dentro  de esta etiqueta sea de color blanco*/
+
+header{
+	padding: 10px 0; /* la etiqueta header como selector el padding me da un margen
+	 arriba y abajo y cero a los lados y es donde se ubica el menu, tambien la habilitamos
+	 para que permanesca arriba cuando damos scroll*/
+	 position: fixed;/*Mantiene arriba el menu*/
+	 width: 100%;
+	 background-color: rgba(48, 48, 48, 0.5); /*Nos pone un fondo oscurito detras del menu
+	 que sirve para resaltar y que se vea siempre hasta en los espacios blancos*/
+}
+header img{
+	width: 200 px; /*ancho de la imagen de 200*/
+}
+header nav {
+	float: right; /* Me coloca la información del menu que esta en el header a la derecha*/
+	margin-top: 10px; /*Margen arriba para este menu*/
+}
+
+header nav a {  /*Espacios propios del html*/
+color: white;
+font-weight: bold; /*Sin negrilla */
+text-decoration: none; /*Sin decoracion*/
+margin-left: 10px; /*Margen a la izq de 10 entre cada item*/
+padding: 10px 15px; /*Margenes arriba y abajo de 10 y a los lados de 15*/
+/*Todo esto es para los titulos que tienen etiqueta "a" dentro del "header" y "nav"*/
+
+}
+header nav a.active {
+	/*Vinculo activo para el caso lo hicimos en el HOME*/
+	background: #fed136;
+	border-radius: 3px; /*Para redondear el menu*/
+}
+
+#home{
+	text-align: center;
+	padding: 200px 0 150px; /*200 arriba 0 a lo 
+	lados y 150 abajo para toda la seccion home 
+	y centrados*/
+}
+#home h1{
+	font-size: 68px;
+	font-weight: normal; /*para cambiar el tamaño de la letra del home en los titulos h1*/
+	line-height: 1.2;
+	margin-bottom: 40px;
+}
+#home .divider {  /*Es la linea amarilla que esta en el centro*/
+	width: 80px;
+	border-top: 5px solid #fed136;
+	margin: 0 auto;
+}
+#home p  /*Secciones creadas*/
+{
+	font-size: 24px; /*Tamaño del parrafo del home*/
+	margin-top: 40px;
+}	
+#home .social {
+	margin-top: 80px;
+}
+
+#home .social a {
+	color: white;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: black;
+	font-size: 24px;
+	font-weight: bold;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	margin-right: 10px;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	transition: all .3s; /*Estas ultimas 3 lineas me definen la pausa al cambio con hover*/
+} 
+
+#home .social a:hover {
+	background-color: #fed136;
+	/* seudo que cambia cuando se pasa el mouse por encima o hover*/
+}
+/*Etiquetas para organizar los logos con circulos */
+#servicios .box{ /*creamos los espacios y la alineacion de las columnas de la section de servicios*/
+	display: inline-block;
+	text-align: center;
+	width: 33%;
+	padding: 10px;
+}
+
+#video {  /*Regla para el video*/
+background-color: black;
+text-align: center;
+padding: 30px 0;  /**Sobreescribe las reglas de arriba en esta seccion para las margenes o espacios*/
+}
+#portafolio{
+	background-color: whitesmoke; /*Color contorno blanco en la section portafolio*/
+}
+#portafolio .box /*creamos los espacios y la alineacion de las columnas de la section de Portafolio*/
+{
+    display: inline-block;
+	text-align: center;
+	width: 31%;
+	margin: 1%;
+	background-color: white;
+}
+
+#portafolio .box img {  /*Ancho de las Imagenes del 100%*/
+	width: 100%;
+}
+
+#portafolio .box p{  /*Regla para la información del parrafo*/ 
+color: #666;
+padding: 10px;
+}
+
+#contacto {  /*Selector para la seccion de contactenos*/
+background-color: #303030;
+background-image: url('../images/map-image.png');
+background-position: center;
+background-repeat: no-repeat;
+text-align: center;
+}
+
+#contacto h2{ /*Color del titulo contactenos o contacto*/
+	color:white;
+}
+
+#contacto input {
+	padding: 20px;
+	width: 400px;
+	border: 1px solid #ccc;  /*Color del borde claro*/
+	border radius: 3px;
+}
+
+#contacto textarea { /*Configurar el textbox del mensaje de contactenos*/
+	margin: 20px 0;
+	padding: 20px;
+	width: 400px;
+}
+
+#contacto button{  /*Configurar el boton enviar*/
+background-color: #fed136;
+padding: 20px 40px;
+border-color: #fed136;
+border-radius: 3px;
+color: white;
+font-size: 18px;
+line-height: 1;
+font-weight:bold; 
+}
+
+#footer {  /*Configura la seccion del footer*/
+	padding: 90px 0;
+	text-align: center;
+	font-size: 18px;
+}
+/*Vamos a crear la regla a continuacion de la section de los servicios*/
+#section {
+	padding: 80px 0; /*Sirve para darle un espacio a todas las secciones*/
+}
+
+#section h2 { /*Para el cuerpo de la section portafolio, contactenos, etc se cambia
+	los tamaños la alineacion y el margen */
+font-size: 32px;
+text-align: center;
+margin-bottom: 80px;
+
+}
+.container { /*clase para centrar los div en css*/
+width: 992px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
